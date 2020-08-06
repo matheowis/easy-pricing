@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
     '& #DropText': {
+      pointerEvents: 'none',
       fontSize: 36,
       textAlign: 'center',
       opacity: 0,
@@ -109,7 +110,15 @@ const DropBox = connect(mapToState)((props: IDropBox) => {
       onDragLeave={handleDragLeave}
       ref={rootRef}
     >
-      <div id='DropText'>Add Text</div>
+      <div 
+      id='DropText'
+      // onDrop={e => e.}
+      // onDragOver={e => e.}
+      // onDragEnter={e => e.}
+      // onDragLeave={e => e.}
+      >
+        Add Text
+        </div>
     </div>
   )
 })
