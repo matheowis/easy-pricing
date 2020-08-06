@@ -3,7 +3,7 @@ type TFontWeight = '500' | '600' | '700' | '800' | '900'
 
 interface IUserComponent {
   type: TType
-  src?: ImageData
+  src?: string
   value?: string
   x?: number
   y?: number
@@ -16,8 +16,8 @@ interface IUserComponent {
 
 export class UserComponent {
   public type: TType = 'text';
-  public src: ImageData | null = null;
-  public value: string | null = null;
+  public src?: string;
+  public value: string = '';
   public x: number = 0;
   public y: number = 0;
   public width: number = 100;
@@ -28,8 +28,8 @@ export class UserComponent {
 
   constructor(props: IUserComponent) {
     this.type = props.type;
-    this.src = props.src || null;
-    this.value = props.value || null;
+    this.src = props.src;
+    this.value = props.value || this.value;
     this.x = props.x || this.x;
     this.y = props.y || this.y;
     this.width = props.width || this.width;

@@ -1,5 +1,6 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
-
+import {userComponents} from '../reducers/RUserComponents'
+import { UserComponent } from '../interfaces/IUserComponent';
 const loggerMiddleware = (store: any) => (next: any) => (action: any) => {
   // console.log("Action type:", action.type);
   // console.log("Action payload:", action.payload);
@@ -16,12 +17,12 @@ const createStoreWithMiddleware = compose(
 )(createStore);
 
 export interface IStore {
-
+  userComponents:UserComponent[]
 }
 
 export const store = createStoreWithMiddleware(
   combineReducers({
-
+    userComponents
   }),
   initialState
 )
