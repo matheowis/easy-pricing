@@ -3,9 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     components: './src/app.tsx',
-    silentRenew: './src/silentRenew.ts'
   },
-  // devtool: 'inline-source-map',
   module: {
     rules: [
       {

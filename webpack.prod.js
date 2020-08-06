@@ -5,7 +5,6 @@ module.exports = {
   devtool: '',
   entry: {
     components: './src/app.tsx',
-    silentRenew: './src/silentRenew.ts'
   },
   module: {
     rules: [

@@ -11,10 +11,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@material-ui/core": "^4.11.0",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
     "clsx": "^1.1.1",
+    "fast-png": "^5.0.2",
     "html2canvas": "^1.0.0-rc.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
